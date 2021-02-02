@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <title>Flask Intro - login page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../static/bootstrap.min.css" rel="stylesheet" media="screen">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Please login</h1>
+      <br>
+      <form action="" method="post">
+        <label for="nom">Nom</label><br>
+        <input type="text" placeholder="nom" name="nom" value="{{
+          request.form.nom }}"></br>
+          <label for="Prenom">Prenom</label><br>
+        <input type="prenom" placeholder="prenom" name="prenom" value="{{
+          request.form.prenom }}"></br>
+          <label for="nom">salaire</label><br>
+        <input type="text" placeholder="salaire" name="salaire" value="{{
+            request.form.salaire }}"></br>
+            <label for="nom">Age</label><br>
+        <input type="age" placeholder="age" name="age" value="{{
+            request.form.age }}"></br>
+            <label for="nom">Matricule</label><br>
+        <input type="matricule" placeholder="matricule" name="matricule" value="{{
+                request.form.matricule }}"></br>
+        <input type="submit" class="btn btn-warning" value="Login">
+      </form>
+      {% if error %}
+        <p class="error"><strong>Error:</strong> {{ error }}
+      {% endif %}
+    </div>
+  </body>
+</html>
